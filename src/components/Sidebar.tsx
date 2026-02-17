@@ -27,7 +27,7 @@ const Sidebar = ({ activeId, onSelect, mobileOpen, onCloseMobile }: SidebarProps
 
       <aside
         className={`fixed inset-y-0 start-0 z-50 flex w-72 flex-col border-e border-sidebar-border bg-sidebar transition-transform duration-300 lg:translate-x-0 ${
-          mobileOpen ? "translate-x-0" : "-translate-x-full rtl:translate-x-full"
+          mobileOpen ? "translate-x-0" : "ltr:-translate-x-full rtl:translate-x-full"
         }`}
       >
         {/* Header */}
