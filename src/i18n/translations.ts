@@ -12,6 +12,18 @@ export const languageNames: Record<Language, string> = {
   el: "Ελληνικά",
 };
 
+export const languageFlags: Record<Language, string> = {
+  en: "🇺🇸",
+  es: "🇪🇸",
+  de: "🇩🇪",
+  fr: "🇫🇷",
+  it: "🇮🇹",
+  zh: "🇨🇳",
+  ar: "🇸🇦",
+  ru: "🇷🇺",
+  el: "🇬🇷",
+};
+
 export const rtlLanguages: Language[] = ["ar"];
 
 type TranslationKeys = {

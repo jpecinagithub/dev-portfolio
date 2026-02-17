@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects | Fullstack Developer Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d93f2",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101b22",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .project-card:hover {
+            box-shadow: 0 0 20px rgba(13, 147, 242, 0.15);
+            border-color: rgba(13, 147, 242, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-20 py-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">terminal</span>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-tight">DevPortfolio</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Projects</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Experience</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-200 dark:bg-slate-800 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-xl">brand_family</span>
+</button>
+<button class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all">
+                        Hire Me
+                    </button>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full px-6 md:px-20 py-12">
+<!-- Page Hero Section -->
+<div class="flex flex-col gap-4 mb-12">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 w-fit">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-xs font-bold text-primary uppercase tracking-wider">Portfolio 2024</span>
+</div>
+<h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tight">
+                        Selected <span class="text-primary">Projects</span>
+</h1>
+<p class="max-w-2xl text-slate-600 dark:text-slate-400 text-lg">
+                        A showcase of fullstack applications, focusing on scalable architecture, performance, and modern user experiences.
+                    </p>
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap gap-3 mb-10">
+<button class="px-5 py-2 rounded-full bg-primary text-white text-sm font-semibold transition-all">All Projects</button>
+<button class="px-5 py-2 rounded-full bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-sm font-semibold transition-all">Fullstack</button>
+<button class="px-5 py-2 rounded-full bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-sm font-semibold transition-all">Frontend</button>
+<button class="px-5 py-2 rounded-full bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-sm font-semibold transition-all">Mobile</button>
+</div>
+<!-- Project Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="project-card group flex flex-col bg-white dark:bg-[#1a262e] border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden transition-all duration-300">
+<div class="relative aspect-video overflow-hidden">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="E-commerce platform interface with product grid" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAfyxJl36Ih4kebFwCwoQcyPstUobIbIrGUVgTi7xo9YHD7WqDd7tdRrMyywsw0kzPO1GpmnbIcNQfTdfFq9S7kpznzB-Z-9AKunRkhLcsEjm0BJpF_6ZPJWDrJtFvMosoEJoVO14Dzma5K3uzervDMRRHNabPYSZcvdOO3ZogA4ENrghNNB6uEIRoWC7tUSC01khwFgTOz5Ptbc5_KDr80S1sYY5MYUtxbypzgiLo5z1NVPV-Wqt2-QAXlfJpl0AjwO7PPErwHWrE');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<span class="text-white text-xs font-medium">Featured Project</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-xl font-bold">E-Commerce Alpha</h3>
+<span class="material-symbols-outlined text-primary text-lg">shopping_cart</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                                A full-featured online store with secure Stripe checkout, real-time inventory management, and a comprehensive admin dashboard.
+                            </p>
+<div class="flex flex-wrap gap-2 mb-8 mt-auto">
+<span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">React</span>
+<span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">Node.js</span>
+<span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">PostgreSQL</span>
+</div>
+<div class="flex gap-3 pt-4 border-t border-slate-100 dark:border-slate-800">
+<a class="flex-1 flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white text-sm font-bold py-2.5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">visibility</span>
+                                    View Live
+                                </a>
+<a class="flex-1 flex items-center justify-center gap-2 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-sm font-bold py-2.5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">code</span>
+                                    Source
+                                </a>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="project-card group flex flex-col bg-white dark:bg-[#1a262e] border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden transition-all duration-300">
+<div class="relative aspect-video overflow-hidden">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Modern task management dashboard with charts" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCB74-5rRCmaxWUUDAbpE5PxIIl2Lilznau-7MLyrjFai3RByJnx1yH5VM9hpVPpmkgc18GXHKpkuzSs50V6-Ze-cEAZRZqePm3ntW7eyZ9P8h413qRHra8qfuSZnjXxxYflRkUkTcpeLSX1DlwX5g36q6Y_UErhwZEbqj4iPMaSFbRzyQP67GNmzxNiPGbS0gHZkGOBDC7ji1RFv0YbZLPDyCfUCdjNLjpm6wZagObVo-YbrZyk9NHQaL_UWPDdAZujDDo9fNJUm8');">
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-xl font-bold">TaskFlow SaaS</h3>
+<span class="material-symbols-outlined text-primary text-lg">task_alt</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                                Streamlined project management for agile teams. Features include drag-and-drop boards, automated reporting, and Slack integration.
+                            </p>
+<div class="flex flex-wrap gap-2 mb-8 mt-auto">
+<span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">Next.js</span>
+<span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">Tailwind</span>
+<span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">Prisma</span>
+</div>
+<div class="flex gap-3 pt-4 border-t border-slate-100 dark:border-slate-800">
+<a class="flex-1 flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white text-sm font-bold py-2.5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">visibility</span>
+                                    View Live
+                                </a>
+<a class="flex-1 flex items-center justify-center gap-2 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-sm font-bold py-2.5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">code</span>
+                                    Source
+                                </a>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="project-card group flex flex-col bg-white dark:bg-[#1a262e] border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden transition-all duration-300">
+<div class="relative aspect-video overflow-hidden">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Social network feed for developers with code snippets" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7jorQ2dOhdFTRNIdSGJxj6RieR5urXKSabTblJ3oDoL_LaktJdjgvCETLeX19CRn1tPvv95qhGGobEUnKpC6etr8-F1Foq6NWs0_Jgige3CFOB3Mo6yj9yevKBiZVjy5cXdwcP1YrlbGS2s7gpbkVJlKkRkc3Tt-hkTbMiW7eitytbNBaUshtKc2p4jNMbYuyFMjQm8xa1Bj8mOzE74Lp5Cgn6vpxo5iG7FOAsVr7kccB9f_ksw9WBzqHJwIJXTUZOD_Qh1V3TBo');">
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-xl font-bold">DevConnect</h3>
+<span class="material-symbols-outlined text-primary text-lg">hub</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                                A social platform for developers to share code snippets, discuss technical challenges, and find collaboration partners.
+                            </p>
+<div class="flex flex-wrap gap-2 mb-8 mt-auto">
+<span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">Vue.js</span>
+<span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">Firebase</span>
+<span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">Express</span>
+</div>
+<div class="flex gap-3 pt-4 border-t border-slate-100 dark:border-slate-800">
+<a class="flex-1 flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white text-sm font-bold py-2.5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">visibility</span>
+                                    View Live
+                                </a>
+<a class="flex-1 flex items-center justify-center gap-2 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-sm font-bold py-2.5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">code</span>
+                                    Source
+                                </a>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="project-card group flex flex-col bg-white dark:bg-[#1a262e] border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden transition-all duration-300">
+<div class="relative aspect-video overflow-hidden">
+<div class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Financial analytics dashboard with dark theme and blue accents" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFiIAdqCVcmoOwQ5BSR0l1MDwMmRvhVD5maROV_PQ7__bGZn-XQtYj7SBvcq5dhfN2YoOQ_uKFSVZSmEYq3SAjb5RnGHVStFQebWvmIZLsnHDIWAJ7TPAdljelomsn7DD2C9_oVjwdSriT02Rk5UKnNgwEykXF9hoYkLjNoXNNAecwrGXnAgCOcwDp_60Z0ht7HxIoF8RrG7t0woKgPuREuM5L48jUsA44KH-EOYPzzSsd5suSZkkSnzQrTIUcadxaREwhfhQR4cE');">
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex items-center justify-between mb-3">
+<h3 class="text-xl font-bold">Analytics Pro</h3>
+<span class="material-symbols-outlined text-primary text-lg">insights</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                                Real-time data visualization for business metrics. Processing millions of events per day with optimized D3.js charts.
+                            </p>
+<div class="flex flex-wrap gap-2 mb-8 mt-auto">
+<span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">D3.js</span>
+<span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">AWS</span>
+<span class="px-2.5 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">MongoDB</span>
+</div>
+<div class="flex gap-3 pt-4 border-t border-slate-100 dark:border-slate-800">
+<a class="flex-1 flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white text-sm font-bold py-2.5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">visibility</span>
+                                    View Live
+                                </a>
+<a class="flex-1 flex items-center justify-center gap-2 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-sm font-bold py-2.5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">code</span>
+                                    Source
+                                </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer CTA -->
+<div class="mt-20 p-10 rounded-2xl bg-slate-200 dark:bg-[#1a262e] text-center border border-slate-300 dark:border-slate-800">
+<h2 class="text-3xl font-bold mb-4">Want to see more?</h2>
+<p class="text-slate-600 dark:text-slate-400 mb-8 max-w-lg mx-auto">
+                        I'm always working on new experiments and open-source contributions. Check out my GitHub for more repositories.
+                    </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto px-8 py-3 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">rocket_launch</span>
+                            Start a Project
+                        </button>
+<button class="w-full sm:w-auto px-8 py-3 bg-transparent border border-slate-400 dark:border-slate-700 font-bold rounded-lg hover:bg-slate-300 dark:hover:bg-slate-800 transition-all">
+                            Browse GitHub
+                        </button>
+</div>
+</div>
+</main>
+<!-- Site Footer -->
+<footer class="border-t border-slate-200 dark:border-slate-800 py-10 px-6 md:px-20 text-center text-slate-500 text-sm">
+<div class="flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">terminal</span>
+<span class="font-bold text-slate-900 dark:text-slate-100 uppercase tracking-widest text-xs">DevPortfolio © 2024</span>
+</div>
+<div class="flex items-center gap-6">
+<a class="hover:text-primary transition-colors" href="#">Twitter</a>
+<a class="hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="#">GitHub</a>
+<a class="hover:text-primary transition-colors" href="#">Email</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

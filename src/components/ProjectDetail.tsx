@@ -4,86 +4,89 @@ import type { Project } from "@/data/projects";
 import Lightbox from "./Lightbox";
 import { Github, ExternalLink, Server } from "lucide-react";
 
-const typeColors: Record<string, string> = {
-  frontend: "bg-blue-500/15 text-blue-400",
-  backend: "bg-amber-500/15 text-amber-400",
-  fullstack: "bg-emerald-500/15 text-emerald-400",
-};
-
 const ProjectDetail = ({ project }: { project: Project }) => {
   const { t, lang } = useI18n();
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  const description = project.description[lang] || project.description.en;
-  const highlights = project.highlights?.[lang] || project.highlights?.en;
+  const localizedTitle = project.titleI18n?.[lang] || project.titleI18n?.es || project.title;
+  const description = project.description[lang] || project.description.es || project.description.en;
+  const highlights = project.highlights?.[lang] || project.highlights?.es || project.highlights?.en;
+  const screenshotDescriptions = project.screenshotDescriptions?.[lang] || project.screenshotDescriptions?.es || project.screenshotDescriptions?.en || [];
+  const visibleScreenshots = project.screenshots.slice(0, 3);
 
   const openLightbox = (i: number) => setLightboxIndex(i);
   const closeLightbox = () => setLightboxIndex(null);
   const prev = useCallback(() => {
-    setLightboxIndex((i) => (i !== null ? (i - 1 + project.screenshots.length) % project.screenshots.length : null));
-  }, [project.screenshots.length]);
+    setLightboxIndex((i) => (i !== null ? (i - 1 + visibleScreenshots.length) % visibleScreenshots.length : null));
+  }, [visibleScreenshots.length]);
   const next = useCallback(() => {
-    setLightboxIndex((i) => (i !== null ? (i + 1) % project.screenshots.length : null));
-  }, [project.screenshots.length]);
+    setLightboxIndex((i) => (i !== null ? (i + 1) % visibleScreenshots.length : null));
+  }, [visibleScreenshots.length]);
 
   return (
     <div className="animate-fade-in">
       {/* Header */}
-      <div className="mb-6">
-        <h2 className="font-display text-3xl font-bold text-foreground">{project.title}</h2>
-        <div className="mt-3 flex flex-wrap items-center gap-3">
-          <span className={`rounded-full px-3 py-1 text-xs font-semibold ${typeColors[project.type]}`}>
-            {t(project.type)}
-          </span>
+      <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h2 className="font-display text-3xl font-bold text-foreground">{localizedTitle}</h2>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {project.technologies.map((tech) => (
+              <span key={tech} className="rounded-xl bg-secondary px-3 py-1.5 text-xs font-semibold text-primary">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex flex-wrap justify-end gap-2">
+          {project.github && (
+            <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-border bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground">
+              <Github className="h-4 w-4" /> {t("viewOnGithub")}
+            </a>
+          )}
+          {project.vercel && (
+            <a href={project.vercel} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-border bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground">
+              <ExternalLink className="h-4 w-4" /> {t("viewOnVercel")}
+            </a>
+          )}
+          {project.railway && (
+            <a href={project.railway} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-border bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground">
+              <Server className="h-4 w-4" /> {t("viewOnRailway")}
+            </a>
+          )}
         </div>
       </div>
 
-      {/* Main screenshot */}
-      {project.screenshots.length > 0 && (
-        <button onClick={() => openLightbox(0)} className="group mb-8 block w-full overflow-hidden rounded-xl border border-border">
-          <img
-            src={project.screenshots[0]}
-            alt={project.title}
-            className="w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-          />
-        </button>
+      {/* Screenshots */}
+      {visibleScreenshots.length > 0 && (
+        <div className="mb-8">
+          <h3 className="mb-3 font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+            {t("screenshots")}
+          </h3>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
+            {visibleScreenshots.map((src, i) => (
+              <div key={i}>
+                <button
+                  onClick={() => openLightbox(i)}
+                  className="group w-full overflow-hidden rounded-lg border border-border"
+                >
+                  <img
+                    src={src}
+                    alt={screenshotDescriptions[i] || `${localizedTitle} screenshot ${i + 1}`}
+                    className="aspect-video w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </button>
+                {screenshotDescriptions[i] && (
+                  <p className="mt-1.5 text-xs text-muted-foreground">{screenshotDescriptions[i]}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
       )}
 
       {/* Description */}
       <p className="mb-8 text-base leading-relaxed text-muted-foreground">{description}</p>
-
-      {/* Links */}
-      <div className="mb-8 flex flex-wrap gap-3">
-        {project.github && (
-          <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground">
-            <Github className="h-4 w-4" /> {t("viewOnGithub")}
-          </a>
-        )}
-        {project.vercel && (
-          <a href={project.vercel} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground">
-            <ExternalLink className="h-4 w-4" /> {t("viewOnVercel")}
-          </a>
-        )}
-        {project.railway && (
-          <a href={project.railway} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground">
-            <Server className="h-4 w-4" /> {t("viewOnRailway")}
-          </a>
-        )}
-      </div>
-
-      {/* Technologies */}
-      <div className="mb-8">
-        <h3 className="mb-3 font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-          {t("technologies")}
-        </h3>
-        <div className="flex flex-wrap gap-2">
-          {project.technologies.map((tech) => (
-            <span key={tech} className="rounded-md bg-tag px-3 py-1.5 text-xs font-medium text-tag-foreground">
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div>
 
       {/* Highlights */}
       {highlights && highlights.length > 0 && (
@@ -102,30 +105,10 @@ const ProjectDetail = ({ project }: { project: Project }) => {
         </div>
       )}
 
-      {/* Gallery */}
-      {project.screenshots.length > 1 && (
-        <div>
-          <h3 className="mb-3 font-display text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-            {t("screenshots")}
-          </h3>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-            {project.screenshots.map((src, i) => (
-              <button
-                key={i}
-                onClick={() => openLightbox(i)}
-                className="group overflow-hidden rounded-lg border border-border"
-              >
-                <img src={src} alt="" className="aspect-video w-full object-cover transition-transform duration-300 group-hover:scale-105" />
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-
       {/* Lightbox */}
       {lightboxIndex !== null && (
         <Lightbox
-          images={project.screenshots}
+          images={visibleScreenshots}
           index={lightboxIndex}
           onClose={closeLightbox}
           onPrev={prev}
