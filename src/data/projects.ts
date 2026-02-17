@@ -250,7 +250,7 @@ export const projects: Project[] = [
       el: "Μια web εφαρμογή για ανακάλυψη και εντοπισμό βουνών με διαδραστικό χάρτη, χρήσιμες λεπτομέρειες και οπτική γκαλερί για κάθε διαδρομή.",
     },
     type: "frontend",
-    technologies: ["React", "TypeScript", "Leaflet", "Tailwind CSS", "Vite"],
+    technologies: ["React", "TypeScript", "Leaflet", "OpenStreetMap API", "Tailwind CSS", "Vite"],
     highlights: {
       en: ["Interactive mountain map", "Route and location details", "Visual gallery with key spots", "Responsive design for mobile and desktop"],
       es: ["Mapa interactivo de montañas", "Detalles de rutas y ubicación", "Galería visual con puntos clave", "Diseño responsive para móvil y escritorio"],
@@ -338,7 +338,7 @@ export const projects: Project[] = [
       el: "Μια διαδραστική ιστορική εφαρμογή περιήγησης στο Λογκρόνιο (1915-1925) με διαδραστικό χάρτη, φωτογραφικό άλμπουμ και κουίζ.",
     },
     type: "fullstack",
-    technologies: ["React", "TypeScript", "Leaflet", "Supabase", "Tailwind CSS", "Vite"],
+    technologies: ["React", "TypeScript", "Leaflet", "OpenStreetMap API", "Tailwind CSS", "Vite"],
     github: "https://github.com/jpecinagithub/Recorrido-Historico-San-Josemaria-en-Logrono",
     vercel: "https://ruta-san-josemaria.vercel.app",
     highlights: {

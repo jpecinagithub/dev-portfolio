@@ -1,5 +1,5 @@
 import { useI18n } from "@/i18n/I18nContext";
-import { Github, Linkedin, Code2 } from "lucide-react";
+import { Github, Linkedin, Code2, MapPinned, Youtube } from "lucide-react";
 
 const AboutMe = () => {
   const { t } = useI18n();
@@ -20,7 +20,7 @@ const AboutMe = () => {
 
       <div className="flex flex-wrap gap-3">
         <a
-          href="https://linkedin.com/in/jonpecina"
+          href="https://www.linkedin.com/in/jpecina/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-2.5 text-sm font-medium text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground"
@@ -29,13 +29,31 @@ const AboutMe = () => {
           LinkedIn
         </a>
         <a
-          href="https://github.com/jonpecina"
+          href="https://github.com/jpecinagithub"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-2.5 text-sm font-medium text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground"
         >
           <Github className="h-4 w-4" />
           GitHub
+        </a>
+        <a
+          href="https://es.wikiloc.com/wikiloc/user.do?id=602802"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-2.5 text-sm font-medium text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground"
+        >
+          <MapPinned className="h-4 w-4" />
+          Wikiloc
+        </a>
+        <a
+          href="https://www.youtube.com/@jonpecina/videos"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-lg border border-border bg-secondary px-4 py-2.5 text-sm font-medium text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground"
+        >
+          <Youtube className="h-4 w-4" />
+          YouTube
         </a>
       </div>
 

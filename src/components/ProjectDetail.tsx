@@ -2,7 +2,7 @@ import { useState, useCallback } from "react";
 import { useI18n } from "@/i18n/I18nContext";
 import type { Project } from "@/data/projects";
 import Lightbox from "./Lightbox";
-import { Github, ExternalLink, Server } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 
 const ProjectDetail = ({ project }: { project: Project }) => {
   const { t, lang } = useI18n();
@@ -39,20 +39,23 @@ const ProjectDetail = ({ project }: { project: Project }) => {
         </div>
 
         <div className="flex flex-wrap justify-end gap-2">
-          {project.github && (
+          {project.github ? (
             <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-border bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground">
               <Github className="h-4 w-4" /> {t("viewOnGithub")}
             </a>
+          ) : (
+            <span className="inline-flex cursor-not-allowed items-center gap-2 rounded-xl border border-border/60 bg-secondary/60 px-4 py-2 text-sm font-semibold text-muted-foreground">
+              <Github className="h-4 w-4" /> {t("viewOnGithub")}
+            </span>
           )}
-          {project.vercel && (
+          {project.vercel ? (
             <a href={project.vercel} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-border bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground">
               <ExternalLink className="h-4 w-4" /> {t("viewOnVercel")}
             </a>
-          )}
-          {project.railway && (
-            <a href={project.railway} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-border bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground">
-              <Server className="h-4 w-4" /> {t("viewOnRailway")}
-            </a>
+          ) : (
+            <span className="inline-flex cursor-not-allowed items-center gap-2 rounded-xl border border-border/60 bg-secondary/60 px-4 py-2 text-sm font-semibold text-muted-foreground">
+              <ExternalLink className="h-4 w-4" /> {t("viewOnVercel")}
+            </span>
           )}
         </div>
       </div>
