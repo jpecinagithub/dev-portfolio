@@ -32,6 +32,14 @@ export const projects: Project[] = [
     title: "QuizQuest",
     titleI18n: {
       es: "QuizQuest",
+      en: "QuizQuest",
+      de: "QuizQuest",
+      fr: "QuizQuest",
+      it: "QuizQuest",
+      zh: "问答任务",
+      ar: "كويز كويست",
+      ru: "КвизКвест",
+      el: "QuizQuest",
     },
     description: {
       en: "A gamified quiz platform where users can test their knowledge across various topics. Features authentication, score tracking, and a sleek dark UI.",
@@ -77,6 +85,14 @@ export const projects: Project[] = [
     title: "CVCraft",
     titleI18n: {
       es: "Generador de CV",
+      en: "CV Generator",
+      de: "CV-Generator",
+      fr: "Générateur de CV",
+      it: "Generatore di CV",
+      zh: "简历生成器",
+      ar: "مولد السيرة الذاتية",
+      ru: "Генератор CV",
+      el: "Δημιουργός CV",
     },
     description: {
       en: "A professional CV/resume generator with multiple templates, real-time preview, and export to PDF/DOCX. Supports multiple languages and template styles.",
@@ -149,6 +165,13 @@ export const projects: Project[] = [
     title: "TranscriptAI",
     titleI18n: {
       es: "Generador de Presentaciones",
+      de: "Präsentationsgenerator",
+      fr: "Générateur de Présentations",
+      it: "Generatore di Presentazioni",
+      zh: "演示文稿生成器",
+      ar: "مولد العروض التقديمية",
+      ru: "Генератор Презентаций",
+      el: "Δημιουργός Παρουσιάσεων",
     },
     description: {
       en: "An AI-powered platform that transforms meeting transcripts into professional presentations with auto-generated slides. Powered by Gemini 3 Pro.",
@@ -324,7 +347,15 @@ export const projects: Project[] = [
     id: "ruta-san-josemaria",
     title: "Ruta San Josemaría",
     titleI18n: {
+      en: "San Josemaría Route",
       es: "Ruta San Josemaría",
+      de: "San-Josemaría-Route",
+      fr: "Route de San Josemaría",
+      it: "Percorso di San Josemaría",
+      zh: "圣何塞玛利亚路线",
+      ar: "مسار سان خوسيماريا",
+      ru: "Маршрут Сан-Хосемарии",
+      el: "Διαδρομή του San Josemaría",
     },
     description: {
       en: "An interactive historical tour app of Logroño (1915-1925) featuring an interactive map, photo album, and trivia game about San Josemaría Escrivá's youth.",
