@@ -29,17 +29,17 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "quizquest",
-    title: "QuizQuest",
+    title: "Juego de Preguntas",
     titleI18n: {
-      es: "QuizQuest",
-      en: "QuizQuest",
-      de: "QuizQuest",
-      fr: "QuizQuest",
-      it: "QuizQuest",
-      zh: "问答任务",
-      ar: "كويز كويست",
-      ru: "КвизКвест",
-      el: "QuizQuest",
+      es: "Juego de Preguntas",
+      en: "Quiz Game",
+      de: "Fragespiel",
+      fr: "Jeu de Questions",
+      it: "Gioco di Domande",
+      zh: "问答游戏",
+      ar: "لعبة أسئلة",
+      ru: "Игра Вопросов",
+      el: "Παιχνίδι Ερωτήσεων",
     },
     description: {
       en: "A gamified quiz platform where users can test their knowledge across various topics. Features authentication, score tracking, and a sleek dark UI.",
@@ -164,6 +164,7 @@ export const projects: Project[] = [
     id: "transcriptai",
     title: "TranscriptAI",
     titleI18n: {
+      en: "Presentation Generator",
       es: "Generador de Presentaciones",
       de: "Präsentationsgenerator",
       fr: "Générateur de Présentations",
@@ -252,6 +253,7 @@ export const projects: Project[] = [
     id: "mountain-locator",
     title: "Mountain Locator",
     titleI18n: {
+      en: "Mountain Locator",
       es: "Localizador de Montañas",
       de: "Berg-Lokalisierer",
       fr: "Localisateur de Montagnes",
