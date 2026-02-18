@@ -63,7 +63,7 @@ const AboutMe = () => {
           {t("technologies")}
         </h3>
         <div className="flex flex-wrap gap-2">
-          {["React", "TypeScript", "Node.js", "Supabase", "Tailwind CSS", "Vite", "Python", "PostgreSQL", "Docker", "Git"].map((tech) => (
+          {["React", "TypeScript", "Node.js", "MySQL", "JWT", "Resend API", "Railway", "Tailwind CSS", "Vite", "Python", "Docker", "Git"].map((tech) => (
             <span key={tech} className="rounded-md bg-tag px-3 py-1.5 text-xs font-medium text-tag-foreground">
               {tech}
             </span>
