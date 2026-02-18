@@ -13,6 +13,7 @@ const ProjectDetail = ({ project }: { project: Project }) => {
   const highlights = project.highlights?.[lang] || project.highlights?.es || project.highlights?.en;
   const screenshotDescriptions = project.screenshotDescriptions?.[lang] || project.screenshotDescriptions?.es || project.screenshotDescriptions?.en || [];
   const visibleScreenshots = project.screenshots.slice(0, 3);
+  const deployUrl = project.vercel || project.railway;
 
   const openLightbox = (i: number) => setLightboxIndex(i);
   const closeLightbox = () => setLightboxIndex(null);
@@ -48,8 +49,8 @@ const ProjectDetail = ({ project }: { project: Project }) => {
               <Github className="h-4 w-4" /> {t("viewOnGithub")}
             </span>
           )}
-          {project.vercel ? (
-            <a href={project.vercel} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-border bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground">
+          {deployUrl ? (
+            <a href={deployUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-border bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground">
               <ExternalLink className="h-4 w-4" /> {t("viewOnVercel")}
             </a>
           ) : (
