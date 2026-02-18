@@ -2,10 +2,12 @@ import { useState } from "react";
 import Sidebar from "@/components/Sidebar";
 import AboutMe from "@/components/AboutMe";
 import ProjectDetail from "@/components/ProjectDetail";
+import GithubRepositories from "@/components/GithubRepositories";
 import LanguageSelector from "@/components/LanguageSelector";
 import { projects } from "@/data/projects";
 import { useI18n } from "@/i18n/I18nContext";
 import { Terminal } from "lucide-react";
+import { GITHUB_REPOSITORIES_VIEW_ID } from "@/constants/views";
 
 const Index = () => {
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -36,7 +38,9 @@ const Index = () => {
 
         <main className="mx-auto w-full max-w-7xl px-4 py-10 lg:px-8">
           <section className="rounded-2xl border border-border bg-card p-6 sm:p-8">
-            {activeProject ? (
+            {activeId === GITHUB_REPOSITORIES_VIEW_ID ? (
+              <GithubRepositories />
+            ) : activeProject ? (
               <ProjectDetail key={activeProject.id} project={activeProject} />
             ) : (
               <AboutMe />

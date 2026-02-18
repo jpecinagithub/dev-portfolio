@@ -1,6 +1,7 @@
 import { useI18n } from "@/i18n/I18nContext";
 import { projects } from "@/data/projects";
-import { User, FolderKanban } from "lucide-react";
+import { User, FolderKanban, Github } from "lucide-react";
+import { GITHUB_REPOSITORIES_VIEW_ID } from "@/constants/views";
 
 interface SidebarProps {
   activeId: string | null;
@@ -55,6 +56,18 @@ const Sidebar = ({ activeId, onSelect }: SidebarProps) => {
               <span className="truncate">{p.titleI18n?.[lang] || p.titleI18n?.es || p.title}</span>
             </button>
           ))}
+
+          <button
+            onClick={() => onSelect(GITHUB_REPOSITORIES_VIEW_ID)}
+            className={`mt-4 flex w-full items-center gap-3 rounded-lg border-t border-sidebar-border px-3 py-3 text-sm transition-colors ${
+              activeId === GITHUB_REPOSITORIES_VIEW_ID
+                ? "bg-sidebar-accent text-primary font-medium"
+                : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+            }`}
+          >
+            <Github className="h-4 w-4 shrink-0" />
+            <span className="truncate">{t("githubRepositories")}</span>
+          </button>
         </nav>
       </aside>
   );
