@@ -49,7 +49,7 @@ export const projects: Project[] = [
       el: "Πλήρες module αυθεντικοποίησης με ασφαλές login, εγγραφή, προστατευμένες διαδρομές και διατήρηση συνεδρίας.",
     },
     type: "fullstack",
-    technologies: ["React", "TypeScript", "Supabase", "JWT", "Tailwind CSS", "Vite"],
+    technologies: ["React", "TypeScript", "MySQL", "JWT", "Resend API", "Railway", "Tailwind CSS", "Vite"],
     github: "https://github.com/jpecinagithub/MODELO-AUTENTICACION-COMPLETO",
     railway: "https://backend-production-7371.up.railway.app/",
     highlights: {
