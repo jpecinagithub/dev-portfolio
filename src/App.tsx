@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { I18nProvider } from "@/i18n/I18nContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import LinkError from "./pages/LinkError";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/link-error" element={<LinkError />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

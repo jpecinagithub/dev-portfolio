@@ -1,6 +1,7 @@
 import { ExternalLink, Github } from "lucide-react";
 import { projects } from "@/data/projects";
 import { useI18n } from "@/i18n/I18nContext";
+import SafeExternalLink from "./SafeExternalLink";
 
 const GithubRepositories = () => {
   const { t, lang } = useI18n();
@@ -26,11 +27,9 @@ const GithubRepositories = () => {
 
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {repositories.map((repo) => (
-          <a
+          <SafeExternalLink
             key={repo.id}
             href={repo.github}
-            target="_blank"
-            rel="noopener noreferrer"
             className="group flex items-center justify-between gap-3 rounded-xl border border-border bg-secondary px-4 py-3 transition-colors hover:bg-muted"
           >
             <div className="min-w-0">
@@ -38,7 +37,7 @@ const GithubRepositories = () => {
               <p className="truncate text-xs text-muted-foreground">{repo.github}</p>
             </div>
             <ExternalLink className="h-4 w-4 shrink-0 text-muted-foreground group-hover:text-foreground" />
-          </a>
+          </SafeExternalLink>
         ))}
       </div>
     </div>

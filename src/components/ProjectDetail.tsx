@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import { useI18n } from "@/i18n/I18nContext";
 import type { Project } from "@/data/projects";
 import Lightbox from "./Lightbox";
+import SafeExternalLink from "./SafeExternalLink";
 import { Github, ExternalLink } from "lucide-react";
 
 const ProjectDetail = ({ project }: { project: Project }) => {
@@ -41,18 +42,18 @@ const ProjectDetail = ({ project }: { project: Project }) => {
 
         <div className="flex flex-wrap justify-end gap-2">
           {project.github ? (
-            <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-border bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground">
+            <SafeExternalLink href={project.github} className="inline-flex items-center gap-2 rounded-xl border border-border bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground">
               <Github className="h-4 w-4" /> {t("viewOnGithub")}
-            </a>
+            </SafeExternalLink>
           ) : (
             <span className="inline-flex cursor-not-allowed items-center gap-2 rounded-xl border border-border/60 bg-secondary/60 px-4 py-2 text-sm font-semibold text-muted-foreground">
               <Github className="h-4 w-4" /> {t("viewOnGithub")}
             </span>
           )}
           {deployUrl ? (
-            <a href={deployUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-border bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground">
+            <SafeExternalLink href={deployUrl} className="inline-flex items-center gap-2 rounded-xl border border-border bg-secondary px-4 py-2 text-sm font-semibold text-secondary-foreground transition-colors hover:bg-muted hover:text-foreground">
               <ExternalLink className="h-4 w-4" /> {t("viewOnVercel")}
-            </a>
+            </SafeExternalLink>
           ) : (
             <span className="inline-flex cursor-not-allowed items-center gap-2 rounded-xl border border-border/60 bg-secondary/60 px-4 py-2 text-sm font-semibold text-muted-foreground">
               <ExternalLink className="h-4 w-4" /> {t("viewOnVercel")}
