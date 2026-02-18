@@ -107,7 +107,8 @@ export const projects: Project[] = [
     },
     type: "frontend",
     technologies: ["React", "TypeScript", "Tailwind CSS", "PDF Generation", "Vite"],
-    github: "https://github.com/jonpecina/cvcraft",
+    github: "https://github.com/jpecinagithub/cv-genie",
+    vercel: "https://cv-genie-eight.vercel.app/",
     railway: "https://cvcraft.railway.app",
     highlights: {
       en: ["Multiple CV templates", "Real-time preview", "PDF & DOCX export", "Multi-language support"],
@@ -276,6 +277,8 @@ export const projects: Project[] = [
     },
     type: "frontend",
     technologies: ["React", "TypeScript", "Leaflet", "OpenStreetMap API", "Tailwind CSS", "Vite"],
+    github: "https://github.com/jpecinagithub/MOUNTAINS",
+    vercel: "https://jpecinagithub.github.io/MOUNTAINS/",
     highlights: {
       en: ["Interactive mountain map", "Route and location details", "Visual gallery with key spots", "Responsive design for mobile and desktop"],
       es: ["Mapa interactivo de montañas", "Detalles de rutas y ubicación", "Galería visual con puntos clave", "Diseño responsive para móvil y escritorio"],
@@ -373,7 +376,7 @@ export const projects: Project[] = [
     type: "fullstack",
     technologies: ["React", "TypeScript", "Leaflet", "OpenStreetMap API", "Tailwind CSS", "Vite"],
     github: "https://github.com/jpecinagithub/Recorrido-Historico-San-Josemaria-en-Logrono",
-    vercel: "https://ruta-san-josemaria.vercel.app",
+    vercel: "https://jpecinagithub.github.io/Recorrido-Historico-San-Josemaria-en-Logrono",
     highlights: {
       en: ["Interactive Leaflet map with points of interest", "Historical photo album with 30+ images", "Trivia game with score tracking", "Light/dark mode support"],
       es: ["Mapa interactivo Leaflet con puntos de interés", "Álbum fotográfico histórico con 30+ imágenes", "Juego de trivial con seguimiento de puntuación", "Modo claro/oscuro"],
