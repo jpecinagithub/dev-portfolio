@@ -24,6 +24,140 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "atlas-ai",
+    title: "Atlas AI",
+    titleI18n: {
+      es: "Atlas IA",
+      en: "Atlas AI",
+      de: "Atlas KI",
+      fr: "Atlas IA",
+      it: "Atlas IA",
+      zh: "Atlas AI",
+      ar: "Atlas AI",
+      ru: "Atlas AI",
+      el: "Atlas AI",
+    },
+    description: {
+      es: "Aplicacion completa de front integrada con las APIs de Gemini. El proyecto usa Next.js con App Router para ocultar variables de entorno y proteger la API Key de Google sin exponerla en el cliente.",
+      en: "Complete frontend application integrated with Gemini APIs. The project uses Next.js App Router to hide environment variables and protect the Google API key without exposing it on the client.",
+      de: "Vollständige Frontend-Anwendung mit Integration der Gemini-APIs. Das Projekt nutzt Next.js mit App Router, um Umgebungsvariablen zu verbergen und den Google API-Schlüssel ohne Offenlegung im Client zu schützen.",
+      fr: "Application frontend complete integree aux APIs Gemini. Le projet utilise Next.js avec App Router pour masquer les variables d'environnement et proteger la cle API Google sans l'exposer côté client.",
+      it: "Applicazione frontend completa integrata con le API Gemini. Il progetto usa Next.js con App Router per nascondere le variabili d'ambiente e proteggere la chiave API Google senza esporla nel client.",
+      zh: "完整前端应用已集成 Gemini API。项目使用 Next.js App Router 隐藏环境变量，在不暴露到客户端的情况下保护 Google API Key。",
+      ar: "تطبيق واجهة أمامية كامل ومتكامل مع واجهات Gemini API. يستخدم المشروع Next.js مع App Router لإخفاء متغيرات البيئة وحماية مفتاح Google API دون كشفه في جهة العميل.",
+      ru: "Полноценное фронтенд-приложение с интеграцией Gemini API. Проект использует Next.js App Router, чтобы скрывать переменные окружения и защищать ключ Google API без раскрытия на клиенте.",
+      el: "Πλήρης frontend εφαρμογή με ενσωμάτωση των Gemini APIs. Το έργο χρησιμοποιεί Next.js App Router για απόκρυψη μεταβλητών περιβάλλοντος και προστασία του Google API key χωρίς έκθεση στον client.",
+    },
+    type: "fullstack",
+    technologies: ["Next.js", "React", "TypeScript", "Gemini API", "App Router", "Tailwind CSS"],
+    github: "https://github.com/jpecinagithub/NEXTJS",
+    vercel: "https://nextjs-xi-two-3jbg3m81ca.vercel.app/",
+    highlights: {
+      es: [
+        "Integracion con APIs de Gemini para funcionalidades de IA",
+        "Uso de App Router para ejecutar llamadas sensibles del lado servidor",
+        "Proteccion de variables de entorno y API Key de Google",
+        "Arquitectura enfocada en seguridad sin sacrificar experiencia frontend",
+      ],
+      en: [
+        "Gemini API integration for AI-driven features",
+        "App Router used to run sensitive calls on the server side",
+        "Environment variables and Google API key protection",
+        "Security-focused architecture with a complete frontend experience",
+      ],
+      de: [
+        "Gemini-API-Integration fur KI-gestutzte Funktionen",
+        "App Router fur sensible Aufrufe auf der Serverseite",
+        "Schutz von Umgebungsvariablen und Google API-Schlussel",
+        "Sicherheitsorientierte Architektur mit vollstandiger Frontend-Erfahrung",
+      ],
+      fr: [
+        "Integration des APIs Gemini pour des fonctionnalites IA",
+        "App Router utilise pour les appels sensibles cote serveur",
+        "Protection des variables d'environnement et de la cle API Google",
+        "Architecture orientee securite avec une experience frontend complete",
+      ],
+      it: [
+        "Integrazione delle API Gemini per funzionalita basate su IA",
+        "App Router usato per eseguire chiamate sensibili lato server",
+        "Protezione delle variabili d'ambiente e della chiave API Google",
+        "Architettura orientata alla sicurezza con esperienza frontend completa",
+      ],
+      zh: [
+        "集成 Gemini API 以实现 AI 功能",
+        "使用 App Router 在服务端执行敏感调用",
+        "保护环境变量与 Google API Key",
+        "在完整前端体验下实现安全优先架构",
+      ],
+      ar: [
+        "تكامل Gemini API لميزات مدعومة بالذكاء الاصطناعي",
+        "استخدام App Router لتنفيذ الاستدعاءات الحساسة على الخادم",
+        "حماية متغيرات البيئة ومفتاح Google API",
+        "بنية تركز على الأمان مع تجربة واجهة أمامية متكاملة",
+      ],
+      ru: [
+        "Интеграция Gemini API для AI-функций",
+        "App Router для выполнения чувствительных вызовов на сервере",
+        "Защита переменных окружения и ключа Google API",
+        "Архитектура с фокусом на безопасность без потери frontend-опыта",
+      ],
+      el: [
+        "Ενσωμάτωση Gemini API για λειτουργίες AI",
+        "Χρήση App Router για ευαίσθητες κλήσεις στην πλευρά του server",
+        "Προστασία μεταβλητών περιβάλλοντος και Google API key",
+        "Αρχιτεκτονική με έμφαση στην ασφάλεια και πλήρη frontend εμπειρία",
+      ],
+    },
+    screenshotDescriptions: {
+      es: [
+        "Vista principal de Atlas AI con interfaz de chat y flujo de prompts.",
+        "Pantalla de resultados generados con Gemini y controles de contexto.",
+        "Seccion de configuracion donde el frontend consume rutas seguras del servidor.",
+      ],
+      en: [
+        "Main Atlas AI view with chat interface and prompt workflow.",
+        "Generated results screen powered by Gemini with context controls.",
+        "Configuration section where the frontend consumes secure server routes.",
+      ],
+      de: [
+        "Hauptansicht von Atlas KI mit Chat-Oberflache und Prompt-Workflow.",
+        "Ergebnisansicht mit Gemini-Ausgaben und Kontextsteuerungen.",
+        "Konfigurationsbereich, in dem das Frontend sichere Serverrouten nutzt.",
+      ],
+      fr: [
+        "Vue principale d'Atlas IA avec interface de chat et flux de prompts.",
+        "Ecran de resultats generes par Gemini avec controles de contexte.",
+        "Section de configuration ou le frontend consomme des routes serveur securisees.",
+      ],
+      it: [
+        "Vista principale di Atlas IA con interfaccia chat e flusso prompt.",
+        "Schermata risultati generati da Gemini con controlli di contesto.",
+        "Sezione configurazione in cui il frontend usa route server sicure.",
+      ],
+      zh: [
+        "Atlas AI 主界面，包含聊天交互与提示词流程。",
+        "由 Gemini 生成的结果页面，带上下文控制。",
+        "配置区域中前端通过安全服务端路由发起请求。",
+      ],
+      ar: [
+        "الواجهة الرئيسية لـ Atlas AI مع واجهة دردشة وتدفق الموجهات.",
+        "شاشة النتائج المولدة عبر Gemini مع عناصر تحكم بالسياق.",
+        "قسم الإعدادات حيث تستهلك الواجهة الأمامية مسارات خادم آمنة.",
+      ],
+      ru: [
+        "Главный экран Atlas AI с чат-интерфейсом и процессом prompt-запросов.",
+        "Экран результатов, сгенерированных Gemini, с управлением контекстом.",
+        "Раздел настроек, где фронтенд использует защищенные серверные маршруты.",
+      ],
+      el: [
+        "Κύρια προβολή του Atlas AI με chat interface και ροή prompts.",
+        "Οθόνη αποτελεσμάτων από Gemini με ελέγχους context.",
+        "Ενότητα ρυθμίσεων όπου το frontend καταναλώνει ασφαλείς server routes.",
+      ],
+    },
+    screenshots: ["/images/atlasAI1.jpg", "/images/atlasAI2.jpg", "/images/atlasAI3.jpg"],
+  },
+  {
     id: "full-authentication",
     title: "Autenticación completa",
     titleI18n: {
